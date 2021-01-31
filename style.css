@@ -12,6 +12,12 @@ nav{
     color: white;
     height: 72px;
 }
+nav .btn{
+    position: absolute;
+    left:580px; top:17px;
+    height:40px;
+    width:40px;
+}
 
 .content{
     font-family: 'Potta One', cursive;
@@ -42,7 +48,7 @@ nav{
     background-color: #272822;
     border-radius: 10px;
 }
-.containers li a{
+.containers a{
     text-decoration: none;
     color: whitesmoke;
 }
