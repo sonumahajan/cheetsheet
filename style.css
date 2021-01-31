@@ -17,13 +17,34 @@ nav{
     font-family: 'Potta One', cursive;
 }
 
-.container{
+.container, .containers{
     /* background-color: red; */
     width: 50vw;
     padding: 32px 0;
     margin: auto;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-weight: bold;
+}
+.containers ul{
+    color: whitesmoke;
+    list-style-type: none;
+    margin-top: 50px;
+}
+.containers li{
+    float: right;
+    margin-right:100px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    height:80px;
+    width: 300px;
+    text-align: center;
+    line-height: 80px;
+    background-color: #272822;
+    border-radius: 10px;
+}
+.containers li a{
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .logo{
