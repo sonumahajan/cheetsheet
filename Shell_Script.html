@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="prism.css">
+        <script src="prism.js"></script>
+        <link rel="stylesheet" href="style.css">
+    <title>Cheatsheet by sonu</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><button class="btn"><i class="fa fa-home fa-2x"></i></button></a>
+        <span class="logo"><img src="copy.png" alt=""></span>       
+        <div class="content center">
+            Cheatsheet Of Shell Scripting!
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li><b>Steps to write and execute a script:</b>
+                <pre class="language-html"><code>1. Open the terminal. Go to the directory where you want to create your script.
+2. Create a file with .sh extension.
+3. Write the script in the file using an editor.
+4. Make the script executable with command chmod +x &lt;fileName&gt;.
+5. Run the script using ./&lt;fileName&gt;.
+</code></pre>
+            </li> 
+            <li><b>Comments:</b>
+                <pre class="language-js"><code>#This is comment.</code></pre>
+            </li> 
+            <li>Print:</b>
+                <pre class="language-js"><code>name = "Hello World!!!"
+echo $name</code></pre>
+            </li>  
+            <li><b>variable:</b> No need to specify the type of variable.
+                <pre class="language-js"><code>var1 = 23
+var2 = 35.45
+var3 = "sonu mahajan" </code></pre>
+            </li>
+            <li><b>Comparison Expressions:</b>
+                <pre class="language-js"><code>&gt;   -gt
+&lt;   -lt 
+&gt;=  -ge 
+&lt;=  -le 
+==  -eq 
+!=  -ne </code></pre>
+            </li>
+            <li><b>Input:</b>
+                <pre class="language-js"><code>read x
+echo $x</code></pre>
+            </li>
+            <li><b>if else Statement:</b>
+                <pre class="language-js"><code>echo "Eneter any number: "
+read no
+if [ $no -gt 100 ]
+then
+echo "$no is greater then 100"
+else
+echo "$no is less then 100"
+fi</code></pre>
+            </li>
+            <li><b>Nested if else Statement:</b>
+                <pre class="language-js"><code>echo "Eneter any number: "
+read no
+if [ $no -gt 100 ]
+then
+        echo "$no is greater then 100"
+elif [ $no == 50 ]
+then
+        echo "$no is half of 100"
+else
+        echo "$no is less then 100"
+fi</code></pre>
+            </li>  
+            <li><b>Case Statement:</b>
+            <pre class="language-js"><code>read a
+case $a in
+        10) echo "Ten";;
+        20) echo "Twenty";;
+        30) echo "Thirty";;
+        *) echo "Random number";;
+esac</code></pre></li>  
+        </ol>
+    </div>
+</body>
+
+</html>
