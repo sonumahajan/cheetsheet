@@ -24,14 +24,11 @@ nav .btn{
 }
 
 .container, .containers{
-    /* background-color: red; */
     width: 50vw;
     padding: 32px 0;
     margin: auto;
-    /* font-family: 'Roboto', sans-serif; */
     font-weight: bold;
 }
-
 .containers ul{
     color: whitesmoke;
     list-style-type: none;
