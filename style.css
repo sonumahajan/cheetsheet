@@ -86,7 +86,7 @@ nav .btn{
     .containers li{
         margin-right:-60px;
     }
-    .container, .containers{
+    .container{
         width: 85vw;
         padding: 32px 0;
     }
