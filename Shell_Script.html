@@ -44,6 +44,7 @@ echo $name</code></pre>
 var2 = 35.45
 var3 = "sonu mahajan" </code></pre>
             </li>
+
             <li><b>Comparison Expressions:</b>
                 <pre class="language-js"><code>&gt;   -gt
 &lt;   -lt 
@@ -52,10 +53,12 @@ var3 = "sonu mahajan" </code></pre>
 ==  -eq 
 !=  -ne </code></pre>
             </li>
+
             <li><b>Input:</b>
                 <pre class="language-js"><code>read x
 echo $x</code></pre>
             </li>
+
             <li><b>if else Statement:</b>
                 <pre class="language-js"><code>echo "Eneter any number: "
 read no
@@ -66,6 +69,7 @@ else
 echo "$no is less then 100"
 fi</code></pre>
             </li>
+
             <li><b>Nested if else Statement:</b>
                 <pre class="language-js"><code>echo "Eneter any number: "
 read no
@@ -79,6 +83,7 @@ else
         echo "$no is less then 100"
 fi</code></pre>
             </li>  
+
             <li><b>Case Statement:</b>
             <pre class="language-js"><code>read a
 case $a in
@@ -86,7 +91,137 @@ case $a in
         20) echo "Twenty";;
         30) echo "Thirty";;
         *) echo "Random number";;
-esac</code></pre></li>  
+esac</code></pre></li>
+
+<li><b>While loop:</b>
+    <pre class="language-js"><code>x=1
+while [ $x -le 10 ]
+do 
+echo $x
+x=`expr $x + 1`
+done
+</code></pre></li>
+
+<li><b>Delay Output:</b>
+    <pre class="language-js"><code>x=1
+while [ $x -le 10 ]
+do 
+echo $x
+x=`expr $x + 1`
+sleep 1
+done
+</code></pre></li>
+
+<li><b>For Loop(1):</b>
+    <pre class="language-js"><code>for((x=1;x&lt;=10;x++))
+do 
+echo $x
+done
+</code></pre></li>
+
+<li><b>For Loop(2):</b>
+    <pre class="language-js"><code>for t in 1 2 3 4
+do 
+echo $t 
+done
+</code></pre></li>
+
+<li><b>For Loop(3):</b>
+    <pre class="language-js"><code>date
+for t in 'date'
+do 
+echo $t 
+done
+</code></pre></li>
+
+<li><b>Until Loop:</b>
+    <pre class="language-js"><code>x=1
+until [ $x -lt 10]
+do 
+echo $x
+x=`expr $x + 1`
+done
+</code></pre></li>
+
+<li><b>Practice Program 1:</b>
+    <pre class="language-js"><code>if [ $# -eq 2 ]
+then
+x=$1
+y=$2
+else
+echo "Enter two numbers: "
+read x
+read y
+fi
+sum=`expr $x + $y`
+echo "$x + $y = $sum"
+</code></pre></li>
+
+<li><b>Practice Program 2:</b>
+    <pre class="language-js"><code>if [ $# -eq 1 ]
+then
+x=$1
+echo "Enter the secound number: "
+read y
+elif [ $# -eq 2 ]
+then
+x=$1
+y=$2
+else
+echo "Enter two numbers: "
+read x
+read y
+fi
+sum=`expr $x + $y`
+echo "$x + $y = $sum"
+</code></pre></li>
+
+<li><b>Practice Program 3:</b>
+    <pre class="language-js"><code>user="abcd"
+pass=1234
+echo "==============================================="
+echo "Login System"
+echo "You have 3 chance"
+for((x=2;x>=0;x--))
+do
+echo "Enter username: "
+read tempuser
+echo "Enter passwerd: "
+read temppass
+echo "==============================================="
+if [ $tempuser == $user ]
+then
+    if [ $temppass == $pass ]
+    then
+    echo "You Have Successfully Logged in The System."
+    echo "==============================================="
+    break
+    else
+    echo "Wrong Username or Password!!!"
+    fi
+else
+echo "Wrong Username or Password!!!"
+fi
+echo "You have $x Chance."
+echo "==============================================="
+done
+</code></pre></li>
+
+<li><b>Practice Program 2:</b>
+    <pre class="language-js"><code>
+</code></pre></li>
+
+<li><b>Practice Program 2:</b>
+    <pre class="language-js"><code>
+</code></pre></li>
+
+<li><b>Practice Program 2:</b>
+    <pre class="language-js"><code>
+</code></pre></li>
+
+<li><b>Practice Program 2:</b>
+    <pre class="language-js"><code>
+</code></pre></li>
         </ol>
     </div>
 </body>
