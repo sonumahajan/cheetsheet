@@ -207,8 +207,81 @@ echo "==============================================="
 done
 </code></pre></li>
 
-<li><b>Practice Program 2:</b>
-    <pre class="language-js"><code>
+<li><b>Phone Directory: Mini project</b>
+    <pre class="language-js"><code>#!/bin/bash
+
+        while :
+        do
+        clear
+        echo "===================================="
+        echo "Welcome to the Phone Directory"
+        echo "===================================="
+        echo "1. Add a Contact"
+        echo "2. Search Contact"
+        echo "3. Delete Contact"
+        echo "4. View Phone Directory"
+        echo "5. Quit"
+        echo ""
+        read -p "Enter command: " usr_cmd
+        clear
+        
+        case $usr_cmd in
+        1)	echo "===================================="
+            echo "ADD NEW CONTACT"
+            echo "===================================="
+            echo ""
+            read -p "Enter Name: " name
+            echo "Got that!"
+            read -p "Enter Number: " number
+                re='^[0-9]+$'
+                if ! [[ $number =~ $re ]]
+                       then
+                   echo "error: Not a number"
+                else
+                 clear
+                 echo "New Contact Info:-"
+                 echo ""
+                 echo "-> Name: $name"
+                 echo "-> Number: $number"
+                 echo "$name : $number" >> phonedir.log
+                 echo "Save Successfully"
+                fi
+        ;;
+        2)	echo "===================================="
+            echo "SEARCH CONTACT"
+            echo "===================================="
+            echo ""
+            read -p "Enter contact name to Search: " search_query
+            clear
+            echo "SEARCH RESULTS:"
+            echo ""
+            grep -i $search_query phonedir.log
+        ;;
+        3)	echo "===================================="
+            echo "DELETE CONTACT"
+            echo "===================================="
+            echo ""
+            read -p "Enter contact name to Delete(case-sensitive): " delete_query
+            sed -i -e "/$delete_query/d" phonedir.log
+            echo "Delete Successful"
+        ;;
+        4)	echo "===================================="
+            echo "PHONE DIRECTORY"
+            echo "===================================="
+            echo ""
+            cat phonedir.log
+        ;;
+        5) break ;;
+        *)echo "INVALID OPTION";;
+        esac;
+        
+        echo ""
+        read -p "Press 5 to Quit, Anything else to return Main Menu " confirm_exit
+        if [ $confirm_exit -eq 5 ]
+        then break
+        fi
+        done
+        
 </code></pre></li>
 
 <li><b>Practice Program 2:</b>
