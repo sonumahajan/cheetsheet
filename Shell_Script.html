@@ -293,60 +293,60 @@ STUDENTS MANAGEMENT
 "
 echo "====================================="
 while [ $c != 6 ]
-echo ""
-echo "====================================="
-echo "Press 1 to Add"
-echo "Press 2 to Search"
-echo "Press 3 to Delete"
-echo "Press 4 to Display all Students"
-echo "Press 5 to Display the Student as per the Class"
-echo "Press 0 to Exit: "
-echo "====================================="
-read c
-do
-case $c in
-1)
-echo "Enter Student's Roll.no: "
-read roll
-echo "Enter Student's Name: "
-read nm
-echo "Enter Student's Class: "
-read cls
-echo "Enter Student's Fees: "
-read fee
-echo "Enter Student's Date of Admission: "
-read dt
-echo $roll "|" $nm "|" $cls "|" $fee "|" $dt >>STUDENT;;
-2)echo ""
-echo "Search by Name: "
-echo ""
-read -p "Enter contact name to Search: " search_query
-clear
-echo "Seacrh Results:"
-echo ""
-grep -i $search_query STUDENT
-;;
-3)
-echo ""
-echo "Delete Contect"
-echo ""
-read -p "Enter student name to Delete(case-sensitive): " delete_query
-sed -i -e "/$delete_query/d" STUDENT
-echo "Delete Successful"
-;;
-4)echo ""
-echo "Students DATA"
-echo ""
-sort -o roll -t "|" -k 1 STUDENTcat roll;;
-5)echo ""
-echo "Student as per the Class"
-echo ""
-cut -d "|" -f 3 STUDENT> count
-sort count | uniq -c
-;;
-0)break;;
-*)echo "Invalid Input!!!"::
-esac
+    echo ""
+    echo "====================================="
+    echo "Press 1 to Add"
+    echo "Press 2 to Search"
+    echo "Press 3 to Delete"
+    echo "Press 4 to Display all Students"
+    echo "Press 5 to Display the Student as per the Class"
+    echo "Press 0 to Exit: "
+    echo "====================================="
+    read c
+    do
+    case $c in
+    1)
+        echo "Enter Student's Roll.no: "
+        read roll
+        echo "Enter Student's Name: "
+        read nm
+        echo "Enter Student's Class: "
+        read cls
+        echo "Enter Student's Fees: "
+        read fee
+        echo "Enter Student's Date of Admission: "
+        read dt
+        echo $roll "|" $nm "|" $cls "|" $fee "|" $dt >>STUDENT;;
+    2)echo ""
+        echo "Search by Name: "
+        echo ""
+        read -p "Enter contact name to Search: " search_query
+        clear
+        echo "Seacrh Results:"
+        echo ""
+        grep -i $search_query STUDENT
+        ;;
+    3)
+        echo ""
+        echo "Delete Contect"
+        echo ""
+        read -p "Enter student name to Delete(case-sensitive): " delete_query
+        sed -i -e "/$delete_query/d" STUDENT
+        echo "Delete Successful"
+        ;;
+    4)echo ""
+        echo "Students DATA"
+        echo ""
+        sort -o roll -t "|" -k 1 STUDENTcat roll;;
+        5)echo ""
+        echo "Student as per the Class"
+        echo ""
+        cut -d "|" -f 3 STUDENT> count
+        sort count | uniq -c
+        ;;
+    0)break;;
+    *)echo "Invalid Input!!!"::
+    esac
 done
 </code></pre></li>
 
