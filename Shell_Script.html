@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="prism.css">
-        <script src="prism.js"></script>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Cheatsheet by sonu</title>
 </head>
 
 <body>
     <nav>
         <a href="index.html"><button class="btn"><i class="fa fa-home fa-2x"></i></button></a>
-        <span class="logo"><img src="copy.png" alt=""></span>       
+        <span class="logo"><img src="copy.png" alt=""></span>
         <div class="content center">
             Cheatsheet Of Shell Scripting!
         </div>
@@ -31,14 +31,14 @@
 4. Make the script executable with command chmod +x &lt;fileName&gt;.
 5. Run the script using ./&lt;fileName&gt;.
 </code></pre>
-            </li> 
+            </li>
             <li><b>Comments:</b>
                 <pre class="language-js"><code>#This is comment.</code></pre>
-            </li> 
+            </li>
             <li>Print:</b>
                 <pre class="language-js"><code>name = "Hello World!!!"
 echo $name</code></pre>
-            </li>  
+            </li>
             <li><b>variable:</b> No need to specify the type of variable.
                 <pre class="language-js"><code>var1 = 23
 var2 = 35.45
@@ -82,69 +82,76 @@ then
 else
         echo "$no is less then 100"
 fi</code></pre>
-            </li>  
+            </li>
 
             <li><b>Case Statement:</b>
-            <pre class="language-js"><code>read a
+                <pre class="language-js"><code>read a
 case $a in
         10) echo "Ten";;
         20) echo "Twenty";;
         30) echo "Thirty";;
         *) echo "Random number";;
-esac</code></pre></li>
+esac</code></pre>
+            </li>
 
-<li><b>While loop:</b>
-    <pre class="language-js"><code>x=1
+            <li><b>While loop:</b>
+                <pre class="language-js"><code>x=1
 while [ $x -le 10 ]
 do 
 echo $x
 x=`expr $x + 1`
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>Delay Output:</b>
-    <pre class="language-js"><code>x=1
+            <li><b>Delay Output:</b>
+                <pre class="language-js"><code>x=1
 while [ $x -le 10 ]
 do 
 echo $x
 x=`expr $x + 1`
 sleep 1
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>For Loop(1):</b>
-    <pre class="language-js"><code>for((x=1;x&lt;=10;x++))
+            <li><b>For Loop(1):</b>
+                <pre class="language-js"><code>for((x=1;x&lt;=10;x++))
 do 
 echo $x
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>For Loop(2):</b>
-    <pre class="language-js"><code>for t in 1 2 3 4
+            <li><b>For Loop(2):</b>
+                <pre class="language-js"><code>for t in 1 2 3 4
 do 
 echo $t 
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>For Loop(3):</b>
-    <pre class="language-js"><code>date
+            <li><b>For Loop(3):</b>
+                <pre class="language-js"><code>date
 for t in 'date'
 do 
 echo $t 
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>Until Loop:</b>
-    <pre class="language-js"><code>x=1
+            <li><b>Until Loop:</b>
+                <pre class="language-js"><code>x=1
 until [ $x -lt 10]
 do 
 echo $x
 x=`expr $x + 1`
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>Practice Program 1:</b>
-    <pre class="language-js"><code>if [ $# -eq 2 ]
+            <li><b>Practice Program 1:</b>
+                <pre class="language-js"><code>if [ $# -eq 2 ]
 then
 x=$1
 y=$2
@@ -155,10 +162,11 @@ read y
 fi
 sum=`expr $x + $y`
 echo "$x + $y = $sum"
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>Practice Program 2:</b>
-    <pre class="language-js"><code>if [ $# -eq 1 ]
+            <li><b>Practice Program 2:</b>
+                <pre class="language-js"><code>if [ $# -eq 1 ]
 then
 x=$1
 echo "Enter the secound number: "
@@ -174,10 +182,11 @@ read y
 fi
 sum=`expr $x + $y`
 echo "$x + $y = $sum"
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>Practice Program 3:</b> login system with limited chance.
-    <pre class="language-js"><code>user="abcd"
+            <li><b>Practice Program 3:</b> login system with limited chance.
+                <pre class="language-js"><code>user="abcd"
 pass=1234
 echo "==============================================="
 echo "Login System"
@@ -205,10 +214,11 @@ fi
 echo "You have $x Chance."
 echo "==============================================="
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>Phone Directory:</b> Mini project to manage Contect details.
-    <pre class="language-js"><code>#!/bin/bash
+            <li><b>Phone Directory:</b> Mini project to manage Contect details.
+                <pre class="language-js"><code>#!/bin/bash
 
 while :
 do
@@ -281,10 +291,11 @@ if [ $confirm_exit -eq 5 ]
 then break
 fi
 done    
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>Student Management:</b>Mini Project to manage students data.
-    <pre class="language-js"><code>#!/bin/sh
+            <li><b>Student Management:</b>Mini Project to manage students data.
+                <pre class="language-js"><code>#!/bin/sh
 c=1
 clear
 echo "====================================="
@@ -348,15 +359,18 @@ while [ $c != 6 ]
     *)echo "Invalid Input!!!"::
     esac
 done
-</code></pre></li>
+</code></pre>
+            </li>
 
-<li><b>     :</b>
-    <pre class="language-js"><code>
-</code></pre></li>
+            <li><b> :</b>
+                <pre class="language-js"><code>
+</code></pre>
+            </li>
 
-<li><b>     :</b>
-    <pre class="language-js"><code>
-</code></pre></li>
+            <li><b> :</b>
+                <pre class="language-js"><code>
+</code></pre>
+            </li>
         </ol>
     </div>
 </body>
